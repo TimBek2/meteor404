@@ -1,23 +1,23 @@
 # meteor404
-Find fallen meteors near you!
+Find fallen meteorites near you!
 
 ## Technologies
 Ruby on Rails, JavaScript, jQuery/AJAX, NASA Meteorite Landing API and Google Maps APIs
 
 ##Features
 
-#### View fallen meteors around world 
+#### View fallen meteorites around world 
 #### Center map on your location 
-#### Click on meteors to view data about them
-#### Get directions to meteors 
+#### Click on meteorites to view data about them
+#### Get directions to meteorites 
 
 ## Work in Progress / To Do
-- [ ] Show directions routes to Meteors on map
+- [ ] Show directions routes to Meteorites on map
 - [ ] User login 
-- [ ] Favoriting of meteors
+- [ ] Favoriting of meteorites
 - [ ] Email directions
 - [ ] Improve CSS styling
-- [ ] Launch to Heroku
+- [x] Launch to Heroku
 
 Brought to you by Akeem S, Mike G, and Tim B
 
