@@ -17,7 +17,7 @@ Ruby on Rails, JavaScript, jQuery/AJAX, NASA Meteorite Landing API and Google Ma
 - [ ] Favoriting of meteorites
 - [ ] Email directions
 - [ ] Improve CSS styling
-- [ ] Launch to Heroku
+- [x] Launch to Heroku
 
 Brought to you by Akeem S, Mike G, and Tim B
 
