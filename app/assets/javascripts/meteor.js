@@ -119,6 +119,7 @@ function initMap() {
       var state = $("#state").val();
       var country = $("#country").val();
       var data = {lat: lat, lng: lng, street: street, city: city, state: state, country: country};
+      console.log(data);
 
       $.ajax({
         url: 'https://meteor404.herokuapp.com/addresses',
@@ -127,6 +128,7 @@ function initMap() {
         headers: {"X-Requested-With":"XMLHttpRequest"},
         dataType: "json", 
         success: function(response){
+          console.log(response);
           $("#meteor-show-container").hide();
           $("#directions-container").show();
           $("#directions-list-container").html(response);
