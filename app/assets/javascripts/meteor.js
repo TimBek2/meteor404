@@ -33,7 +33,8 @@ function initMap() {
       var form = this;
       $.ajax({
       method: 'post',
-      url: "https://meteor404.herokuapp.com/addresses/center_map",
+      // url: "https://meteor404.herokuapp.com/addresses/center_map",
+      url: "http://localhost:3000/addresses/center_map",
       data: $(event.target).serialize()
       }).then(function(response) {
         var city = response.city;
@@ -76,7 +77,8 @@ function initMap() {
 
           // Display meteor data on page when clicked
           $.ajax({
-            url: 'https://meteor404.herokuapp.com/meteors',
+            // url: 'https://meteor404.herokuapp.com/meteors',
+            url: "http://localhost:3000/meteors",
             type: 'POST',
             data: data,
             dataType: "json",
@@ -84,7 +86,6 @@ function initMap() {
               $("#meteor-show-container").show();
               $("#meteor-show-container").html(response.responseText);
               $("#directions-container").hide();
-              $("#directions-container").clear();
             }
           });
         });
@@ -114,15 +115,16 @@ function initMap() {
       event.preventDefault();
       var lat = $("#lat").val();
       var lng = $("#lng").val();
-      var street = $("#street").val();
+      var startAddress = $("#start_address").val();
       var city = $("#city").val();
       var state = $("#state").val();
       var country = $("#country").val();
-      var data = {lat: lat, lng: lng, street: street, city: city, state: state, country: country};
+      var data = {lat: lat, lng: lng, startAddress: startAddress, city: city, state: state, country: country};
       console.log(data);
 
       $.ajax({
-        url: 'https://meteor404.herokuapp.com/addresses',
+        // url: 'https://meteor404.herokuapp.com/addresses',
+        url: "http://localhost:3000/addresses",
         type: 'POST',
         data: data,
         headers: {"X-Requested-With":"XMLHttpRequest"},
