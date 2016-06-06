@@ -110,7 +110,7 @@ function initMap() {
     })
 
     // Sends form data to addresses#create where HTTParty gem is used to retrieve directions from google api
-    $("#meteor-show-container").on("submit", "#meteor-show-button",function(event){
+    $("#meteor-show-container").on("submit", "#meteor-directions-button",function(event){
       event.preventDefault();
       var lat = $("#lat").val();
       var lng = $("#lng").val();
@@ -119,6 +119,7 @@ function initMap() {
       var state = $("#state").val();
       var country = $("#country").val();
       var data = {lat: lat, lng: lng, street: street, city: city, state: state, country: country};
+      console.log(data);
 
       $.ajax({
         url: 'https://meteor404.herokuapp.com/addresses',
@@ -127,6 +128,7 @@ function initMap() {
         headers: {"X-Requested-With":"XMLHttpRequest"},
         dataType: "json", 
         success: function(response){
+          console.log(response);
           $("#meteor-show-container").hide();
           $("#directions-container").show();
           $("#directions-list-container").html(response);
